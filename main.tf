@@ -61,11 +61,11 @@ resource "azurerm_windows_function_app" "language_translator-fxn" {
       "TextTranslationEndpoint" = azurerm_cognitive_account.text_translation.endpoint
        "FUNCTIONS_WORKER_RUNTIME"      = "dotnet"
          "AzureWebJobsStorage"           = azurerm_storage_account.language_translator-stg.primary_connection_string
-          "StorageContainerName"          = azurerm_storage_container.language_translator-stg.name
-    "APPINSIGHTS_INSTRUMENTATIONKEY" = azurerm_app_insights.language_translator-appinsights.instrumentation_key
+          "StorageContainerName"          = azurerm_storage_container.language_translator-cont.name
+    "APPINSIGHTS_INSTRUMENTATIONKEY" = azurerm_application_insights.language_translator-appinsights.instrumentation_key
 
    
-    }
+  }
   
   identity {
     type = "SystemAssigned"
