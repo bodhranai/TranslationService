@@ -1,3 +1,5 @@
+Azure function implementing Azure AI Services Translator project
+
 terraform init -upgrade
 terraform plan -out main.tfplan
 terraform apply main.tfplan
